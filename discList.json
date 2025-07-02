@@ -1,0 +1,181 @@
+{
+    "discs": [
+      {
+        "name": "Final Fantasy 7",
+        "model": "FF73DDisc.glb",
+        "description": "Embark on an epic journey to save the planet in the legendary RPG, Final Fantasy VII.",
+        "color": "#4682B4",
+        "video": "https://www.youtube-nocookie.com/embed/JujtlsiqZ-E?autoplay=1&mute=1&loop=1&playlist=JujtlsiqZ-E",
+        "music": [
+          "<iframe class=\"embedTrack\" width=\"100%\" height=\"450\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1222248478&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/cyalm\" title=\"Cyalm\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Cyalm</a> · <a href=\"https://soundcloud.com/cyalm/sets/final-fantasy-vii\" title=\"Final Fantasy VII\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Final Fantasy VII</a></div>"
+        ],
+        "images":[
+          "https://www.hollywoodreporter.com/wp-content/uploads/2019/04/ffvii_banner_en-h_2019.jpg?w=1296&h=730&crop=1",
+          "https://jegged.com/img/Games/Final-Fantasy-VII/Walkthrough/FFVII-00016-Train-Platform-Soldiers-First-Battle.png",
+          "https://thefinalfantasy.net/gallery/screenshots/ff7/dynamic_previews/ff7-cloud-aeris_scale_800_700.jpg",
+          "https://i.kinja-img.com/image/upload/c_fit,q_60,w_645/djj7pwc2ubmlz3pseovn.jpg"
+        ],
+        "about":{
+          "Release Date":"January 31, 1997",
+          "Genres":"RPG, Turn based combat, Story driven, Adventure",
+          "Developer": "Square Co., Ltd.",
+          "Publishers": "Square Co., Ltd.",
+          "Info":"Final Fantasy VII is the seventh main installment in the Final Fantasy series, developed and published by Squaresoft. It was released in January 1997 for the PlayStation, and was later re-released for the Microsoft Windows, PlayStation 3, PlayStation Portable, PlayStation Vita, PlayStation 4, iOS, Android, Xbox One, and Switch platforms, it is also included on the PlayStation Classic mini console. It was directed by Yoshinori Kitase, produced by Hironobu Sakaguchi, with a score produced by Nobuo Uematsu, and character designs by Tetsuya Nomura. It was the first game in the series to feature three-dimensional graphics, pre-rendered backgrounds, and numerous full motion videos, and the first in the main series to be released in Europe and Oceania.<br><br>Final Fantasy VII follows the story of mercenary Cloud Strife, who is hired by the eco-terrorist group AVALANCHE—led by Barret Wallace—to help fight the mega-corporation Shinra Electric Power Company, who attempts to drain the planet's lifeblood as an energy source to further their profits. Apathetic to the cause, Cloud initially fights for personal gain, and for the promise he made to childhood friend Tifa Lockhart. Cloud eventually joins forces with many others to save the planet, which is threatened by Shinra and Cloud's nemesis Sephiroth, and discovers a reason to fight for a cause other than his own."
+
+        },
+        "reviews":{
+          "GameShark": "Every aspect of the game is virtually flawless, from its movie inspired soundtrack, to the incredibly life-like FMV, to the detailed battle and Materia systems, to the boatload of simplistic and addictive mini-games. This is what RPG fans have been waiting for. 100/100",
+          "PSX Nation": "This is *the* one game you must buy or otherwise youll never see the true power of the PlayStation. 100/100",
+          "Gamestyle": "You can play the game time and time again. Always finding something new, from a new piece of materia to a new place, to defeating the ultimate weapons. The story twists and turns all the time always keeping you guessing as to what will happen next. 90/100",
+          "IGN":9.5,
+          "Gamespot":9.5,
+          "Metacritic":9.2
+        },
+        "characters":{
+          "Cloud Strife": "https://static.wikia.nocookie.net/finalfantasy/images/3/32/Cloud_Portrait.jpg",
+          "Tifa Lockheart": "https://static.wikia.nocookie.net/finalfantasy/images/0/0a/Tifa_Portrait.jpg",
+          "Spehiroth": "https://static.wikia.nocookie.net/finalfantasy/images/4/4c/Sephiroth_Portrait.jpg"
+        }
+      },
+      {
+        "name": "Tekken 3",
+        "model": "Tekken33DDisc.glb",
+        "description": "Step into the arena and unleash your inner fighter in the electrifying world of Tekken 3!",
+        "color": "#B22222",
+        "video": "https://www.youtube-nocookie.com/embed/IsvtUxEFQaU?autoplay=1&mute=1&loop=1&playlist=IsvtUxEFQaU",
+        "music":["<iframe class=\"embedTrack\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/228280430&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/vgmplanet\" title=\"VGM Planet\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">VGM Planet</a> · <a href=\"https://soundcloud.com/vgmplanet/sets/tekken-3-ost\" title=\"Tekken 3 OST\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Tekken 3 OST</a></div>"],
+        "images":[
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu1_6GcM2oU-VB0taKpUoKNod8Foer9QFj-Q&s",
+          "https://www.thepixelempire.net/uploads/1/2/1/1/12119064/tekken-3-playstation-10_orig.png",
+          "https://www.fightersgeneration.com/nx3/char/ancient-ogre-tekken3.jpg",
+          "https://i.ytimg.com/vi/sabyvQ5nzZg/maxresdefault.jpg"
+        ],
+        "about":{
+          "Release Date":"March 26, 1998",
+          "Genres":"Fighting, Arcade, Competitive, 3D",
+          "Developer": "Namco",
+          "Publishers": "Namco",
+          "Info":"Tekken 3 (鉄拳3 Tekken Suri?, lit. Iron Fist 3) is the third installment in the Tekken fighting game series. It was originally released in 1997 in arcades, with a home release for the PlayStation following in 1998. A simplified \"arcade\" version of the game was released in 2005 for the PlayStation 2 as part of the Arcade History mode featured exclusively in Tekken 5. Tekken 3 was the first game released on Namco System 12 hardware (an improvement over Tekken and Tekken 2, which used System 11). The game had a significant high energy gameplay and feel, which contributed to it being often considered the best game in the entire series by both fans and critics and one of the greatest games of its genre on the original PlayStation. It was the last installment in the Tekken series to be released for the original PlayStation; it was followed by the spin-off Tekken Tag Tournament and its successor Tekken 4 exclusively on PlayStation 2."
+
+        },
+        "reviews":{
+          "GameRater0000": "Best and maybe, the most revolutional fighting video game of all time! Tekken 3, released for arcade and PS1, is often referred as \"Mortal Kombat killer\". One of the first fully 3D fighting video games. My rating is 10/10",
+          "GMR Magazine": "An amazing conversion, given the difference between the arcade and PlayStation hardware at the time. Set the standard for bonuses. [Feb 2003, p.97] 100/100",
+          "Electric Playground": "I'd come off as a huge hypocrite if I didn't put Tekken 3 at the top of the list. \"Tekken 2\" was a 10, and Tekken 3 is a better game in most respects. 100/100",
+          "IGN":9.3,
+          "Gamespot":9.9,
+          "Metacritic":9.6
+        },
+        "characters":{
+          "Jin Kazama": "https://picfiles.alphacoders.com/189/thumb-189502.png",
+          "King": "https://i1.sndcdn.com/artworks-000180556347-ff893a-t500x500.jpg",
+          "Heihachi Mishima": "https://i1.sndcdn.com/artworks-5TBePAKd9Kza2pDD-5FtJ5g-t500x500.jpg"
+        }
+      },  
+      {
+        "name": "Spyro Year of The Dragon",
+        "model": "SpyroYoTD3DDisc.glb",
+        "description": "Join Spyro on a thrilling adventure to rescue the dragon eggs in Spyro: Year of the Dragon!",
+        "color": "#FFA500",
+        "video": "https://www.youtube-nocookie.com/embed/4WheOEu8mFw?autoplay=1&mute=1&loop=1&playlist=4WheOEu8mFw",
+        "music": ["<iframe class=\"embedTrack\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1098248803&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/vgmplanet\" title=\"VGM Planet\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">VGM Planet</a> · <a href=\"https://soundcloud.com/vgmplanet/sets/spyro-the-dragon-3-year-of-the-dragon-ost\" title=\"Spyro the Dragon 3: Year of the Dragon OST\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Spyro the Dragon 3: Year of the Dragon OST</a></div>"],
+        "images":[
+          "https://www.darkspyro.net/year/gallery013.jpg",
+          "https://kresnik258gaming.wordpress.com/wp-content/uploads/2017/12/spyro_001.jpg",
+          "https://i.kinja-img.com/image/upload/c_fit,q_60,w_645/430d0f4fea2880da841206dfe33a9cc1.jpg",
+          "https://cdn.mos.cms.futurecdn.net/kDk7Vzza6ieMjJiXYsnxMH.jpg"
+        ], 
+        "about":{
+          "Release Date":"October 24, 2000",
+          "Genres":"platformer, collectathon, 3d exploration, cartoony",
+          "Developer": "Insomniac Games",
+          "Publishers": "Sony Interactive Entertainment, Universal Interactive",
+          "Info":"Spyro: Year of the Dragon, also known as Spyro 3, is the third game in the Spyro the Dragon series and the franchise. It was also the last Spyro game to be released for the PlayStation, as well as the last Spyro game developed by Insomniac Games. It is the direct sequel to Spyro 2: Ripto's Rage!. <br>A remake of Year of the Dragon, along with the first Spyro game and Ripto's Rage! was released as part of the Spyro Reignited Trilogy."
+
+        },
+        "reviews":{
+          "CNET Gamecenter": "The folks at Insomniac have built an incredibly detailed, fun, and immersive action/adventure that is definitely worth picking up, whether or not you're familiar with this franchise. 90/100",
+          "PSX Nation": "One of the rare, few 32-bit games that still impresses, still retains magic after being beaten, and still begs for one last shot at exploring all its secrets and milking all its three-dimensional worth. 95/100",
+          "Sitheral": "Its a tough one. Its the best and at the same time, the worst, the best because it has all the important additions from 2 and builds on top of that with stuff as crazy as other playable characters! So why its the worst? Because it lacks the polish 2 had and playing other characters, as fun as it might be always feels worse than playing Spyro. It feels like Insomniac was tired with the series, did not know what to with it or simply there wasn't enough time. 7/10",
+          "IGN":8,
+          "Gamespot":7,
+          "Metacritic":8.5
+        },
+        "characters":{
+          "Spyro": "https://upload.wikimedia.org/wikipedia/en/5/53/Spyro.png",
+          "Sparx": "https://cdn.spyrowiki.com/b/b1/Sparx_Reignited_UI_Art.png",
+          "Hunter": "https://static.wikia.nocookie.net/spyro/images/a/a7/Hunter_PS1.jpg"
+        }
+      },
+      {
+        "name": "Street Fighter Alpha 3",
+        "model": "SFAlpha33DDisc.glb",
+        "description": "Get ready for the ultimate street fighting experience with Street Fighter Alpha 3's diverse roster and intense action!",
+        "color": "#FF4500",
+        "video": "https://www.youtube-nocookie.com/embed/uXFPpYZ6CTQ?autoplay=1&mute=1&loop=1&playlist=uXFPpYZ6CTQ",
+        "music": ["<iframe class=\"embedTrack\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1386663931&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/user-210974806\" title=\"MattThaGod\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">MattThaGod</a> · <a href=\"https://soundcloud.com/user-210974806/sets/street-fighter-alpha-3-ost\" title=\"Street Fighter Alpha/Zero 3 OST\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Street Fighter Alpha/Zero 3 OST</a></div>"],
+        "images": [
+          "https://wiki.supercombo.gg/images/thumb/a/ae/SFA3_Cover_Art.jpg/772px-SFA3_Cover_Art.jpg?20211022201028",
+          "https://sfgalleries.net/art/sfa3/sfz3-poster1_big.jpg",
+          "https://sfgalleries.net/art/sfa3/sfz3-poster2_big.jpg",
+          "https://i.pinimg.com/736x/54/90/8b/54908b460e761083befd19e4a3553f2f.jpg"
+        ],
+        "about":{
+          "Release Date":"June 29, 1998",
+          "Genres":"Fighting, Action, Arcade, pvp, Competitive",
+          "Developer": "Capcom",
+          "Publishers": "Capcom",
+          "Info":"Street Fighter Alpha 3, known as Street Fighter Zero 3 (ストリートファイターZERO 3 Sutorīto Faitā Zero 3?) in Japan and Asia, is a 1998 2D fighting game by Capcom originally released for the CPS II arcade hardware. It is the third game in the Street Fighter Alpha series, following Street Fighter Alpha: Warriors' Dreams and Street Fighter Alpha 2. The gameplay system from the previous Alpha games was given a complete overhaul with the addition of three selectable fighting styles based on Street Fighter Alpha: Warriors' Dreams (A-ism), Street Fighter Alpha 2 (V-ism), and Super Street Fighter II Turbo (X-ism), new stages, over seven new and returning characters, and a new and exclusive soundtrack for the game."
+
+        },
+        "reviews":{
+          "TotalGames.net": "Fighting games don't come much more accomplished than this though, and Street Fighter Alpha 3 is one of the most addictive and playable we've ever come across. 93/100",
+          "Cheat Code Central Platinum": "Fans will appreciate that Capcom loaded this game with bonuses for the most diligent players. You'll find more modes to play and more characters to choose from such as Evil Ryu, Guile and more, so how's that for replay value? Not only did Capcom go overboard on extras but just wait until you see the art that appears before each fight in this game. It's classic. 95/100",
+          "Absolute Playstation": "The wonderful hand-drawn graphics move and animate the best that I have ever seen in a 2D fighter and the action is non-stop. 89/100",
+          "IGN":9.3,
+          "Gamespot":8,
+          "Metacritic":8
+        },
+        "characters":{
+          "Ryu": "https://wiki.supercombo.gg/images/thumb/3/3c/SFA3_Ryu_Art.png/300px-SFA3_Ryu_Art.png",
+          "Chun-Li": "https://wiki.supercombo.gg/images/thumb/a/a8/SFA3_Chun-Li_Art.png/300px-SFA3_Chun-Li_Art.png",
+          "M. Bison": "https://wiki.supercombo.gg/images/thumb/6/6d/SFA3_M._Bison_Art.png/300px-SFA3_M._Bison_Art.png"
+        }
+      },
+      {
+        "name": "Castlevania: Symphony of the Night",
+        "model": "CSoTN3DDisc.glb",
+        "description": "Delve into the gothic world of Castlevania: Symphony of the Night and uncover the secrets of Dracula's castle.",
+        "color": "#8B0000",
+        "video": "https://www.youtube-nocookie.com/embed/QHI--SDdaCA?autoplay=1&mute=1&loop=1&playlist=QHI--SDdaCA",
+        "music": ["<iframe class=\"embedTrack\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1162019893&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/captinmcderp-derp\" title=\"Nosferatu\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Nosferatu</a> · <a href=\"https://soundcloud.com/captinmcderp-derp/sets/castlevania-symphony-of-the\" title=\"Castlevania Symphony of the night ost\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Castlevania Symphony of the night ost</a></div>"] ,
+        "images": [
+          "https://assets-prd.ignimgs.com/2021/12/14/castlevaniasymp-1639445441428.jpg",
+          "https://i.redd.it/ybcy7rioxrw71.jpg",
+          "https://fantasyanime.com/valhalla/castlevaniasotn/images/castlevania-sotn-wlpr14_1920x1080.png",
+          "https://i.ytimg.com/vi/_IQLovXjHfI/maxresdefault.jpg"
+        ],
+        "about":{
+          "Release Date":"March 20, 1997",
+          "Genres":"Metroidvania, Exploration, 2D action",
+          "Developer": "KCET",
+          "Publishers": "Konami",
+          "Info": "Castlevania: Symphony of the Night (悪魔城ドラキュラＸ月下の夜想曲 Akumajō Dracula X: Gekka no Yasōkyoku?, lit. \"Demon Castle Dracula X: Nocturne in the Moonlight\") (fan commonly abbreviated SOTN/SotN, Konami abbreviated SoN[1]), released in Japan as Dracula X: Nocturne in the Moonlight, is an action platformer/role-playing video game, part of Konami's long running Castlevania series. It is a direct sequel to Castlevania: Rondo of Blood, which was originally released for the Nippon Electric Company PC Engine (TurboGrafx 16) in 1993, in Japan. <br><br>The game was developed by Konami Computer Entertainment Tokyo and published by Konami for the Sony PlayStation in 1997. It was re-released the following year for the Sega Saturn with additional features exclusively in Japan. In 2007, it was re-released in America for the Xbox 360's Xbox Live Arcade. The original PlayStation release was released for download on the PlayStation 3, playable on both that system and the PlayStation Portable (PSP). A complete port was also included in The Dracula X Chronicles for the PSP, featuring updated dialogues and bug fixes. In 2018, it was included in the Castlevania Requiem collection exclusive for the PlayStation 4. It was released on March 4, 2020 for mobile phones (iOS, Android); unlike previous \"metroidvania\" Castlevania titles released on mobile platforms, which were simplified versions, this is a direct port of the console game. <br><br>Although not very successful during its release in North America and Europe (only 60 thousand copies sold in each continent), Symphony of the Night has become highly sought-after by video game players and is widely considered to be one of the best and a milestone of the series. Almost all of the game's successors have emulated its open-ended gameplay."
+
+        },
+        "reviews":{
+          "Official U.S. Playstation Magazine": "Featuring a massive quest filled with RPG elements, mind-blowing 2D backgrounds, fantastic character artwork, an astounding soundtrack and osme of the best Castlevania gameplay ever seen, SOTN is a PS one classic that can't be missed. [Nov 2001, p.40] 100/100",
+          "Gaming Maxx": "The music is outstanding. It sets the mood perfectly for each scene and makes you feel like you are really in the game. 94/100",
+          "Just RPG": "One of the best games available for the original PlayStation. With all of the new features available, Symphony of the Night is very different from the previous games in the Castlevania series, but it also stands out as one of the best. 94/100",
+          "IGN":9,
+          "Gamespot":8.9,
+          "Metacritic":9.3
+        },
+        "characters":{
+          "Alucard": "https://upload.wikimedia.org/wikipedia/pt/9/98/Alucard_SotN.jpg",
+          "Ricther Belmont": "https://i.pinimg.com/564x/ac/21/a3/ac21a37c8636423601d2dad9279c3744.jpg",
+          "Dracula": "https://i.pinimg.com/564x/f7/dc/30/f7dc30434b2e35a316f9fc9f3b141dee.jpg"
+        }
+      }
+    ]
+}
