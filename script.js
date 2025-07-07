@@ -131,9 +131,9 @@ var ps1Spin = false;
 loader2.load('playstation_1.glb', function (gltf) {
     ps1Mesh = gltf.scene;
     //mesh.position.set(-0.125,1.45,3.5)
-    ps1Mesh.position.set(10,25.55,-80)
+    ps1Mesh.position.set(10,15.55,-20)
     ps1Mesh.rotation.x = -75;
-    ps1Mesh.rotation.y = 0;
+    ps1Mesh.rotation.y = -10;
     scene.add(ps1Mesh);
 });
 /*
