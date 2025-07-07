@@ -817,3 +817,20 @@ progress {
     background-image: none !important;
 }
 
+/* discMenu'nun sağındaki ve arkasındaki şeritleri yarı saydam yap */
+.discMenu:not(.exitMenu) {
+    background: rgba(24, 26, 32, 0.85) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    opacity: 1 !important;
+}
+
+/* Eğer .discMenu içinde başka gradient/şerit varsa override edilir */
+.discMenu {
+    background: rgba(24, 26, 32, 0.85) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
