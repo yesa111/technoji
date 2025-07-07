@@ -801,61 +801,19 @@ progress {
     background-image: none !important;
     box-shadow: none !important;
     border: none !important;
-    opacity: 1 !important;
 }
 
-/* .aboutPanel ve .charPanel arka planlarını sadeleştir */
-.aboutPanel,
-.charPanel {
+/* Eğer .discMenu veya disc ile ilgili başka özel şerit/gradient varsa onları da kaldır */
+.discMenu,
+#discs {
     background: none !important;
     background-image: none !important;
     box-shadow: none !important;
     border: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
 }
 
-/* .cPhotos ve .myChar arka planlarını sadeleştir */
-.cPhotos,
-.myChar {
-    background: none !important;
+/* Eğer .discMenu içinde radial-gradient veya linear-gradient ile tanımlı background varsa override */
+.discMenu {
     background-image: none !important;
-}
-
-/* Diğer ilgili alanlar için de arka planı kaldır */
-.dContents,
-.photos,
-.photo,
-.canScroll {
-    background: none !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
-
-/* Yarı saydam olan şeritler artık tamamen saydam değil, hafif koyu ve belirgin */
-.cPhotos {
-    background: rgba(30, 30, 40, 0.85) !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    clip-path: circle(40vw at 100% 50%);
-}
-
-.myChar {
-    background: rgba(40, 40, 50, 0.85) !important;
-    background-image: none !important;
-}
-
-/* .charPanel için de hafif koyu yarı saydam arka plan */
-.charPanel {
-    background: rgba(24, 26, 32, 0.92) !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
 }
 
