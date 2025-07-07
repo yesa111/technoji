@@ -1,4 +1,4 @@
-/* --- Sade ve Minimal Tasarım --- */
+/* --- Arka plan resimleri kaldırıldı, PSLogo hariç --- */
 
 /* Temel renkler ve font */
 :root {
@@ -64,7 +64,7 @@ p, li, label, span {
   letter-spacing: 0.01em;
 }
 
-/* Kutular ve arka planlar sadeleştirildi */
+/* Kutular, paneller ve disc arka planları sadeleştirildi */
 .container,
 .aboutPanel,
 .myTracks,
@@ -72,25 +72,19 @@ p, li, label, span {
 .photos,
 .photo,
 .charPanel,
-.canScroll {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* --- Disc tablosunun arka plan resmi kaldırıldı --- */
+.canScroll,
+.discMenu:not(.exitMenu),
 #discs {
   background: none !important;
   background-image: none !important;
   box-shadow: none !important;
   border: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 /* Sadece PSLogo için arka plan varsa koru */
 #PSLogo {
-  /* Eğer özel bir arka planı varsa, burada tanımlı kalsın */
   background: url('pslogo.png') center/contain no-repeat !important;
 }
 
