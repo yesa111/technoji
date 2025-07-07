@@ -769,4 +769,46 @@ function changeVideoSource(newVideoId) {
     videoIframe.src = iframeSrc;
 }
 
+// --- TASARIM İYİLEŞTİRMELERİ ---
+
+// Neon efektli başlıklar ve yazılar için class ekleme
+document.addEventListener("DOMContentLoaded", () => {
+  // Tüm başlıkları neon efektiyle güncelle
+  document.querySelectorAll("h1, h2, h3").forEach(el => {
+    el.style.textShadow = "0 0 8px #39ff14, 0 0 16px #ff3ec9";
+    el.style.color = "#39ff14";
+    el.style.fontFamily = "'Roboto Mono', 'Orbitron', 'Segoe UI', Arial, sans-serif";
+    el.style.fontWeight = "bold";
+  });
+
+  // Tüm linkleri ve butonları sadeleştir, kutu ve arka planı kaldır
+  document.querySelectorAll("a, button").forEach(el => {
+    el.style.background = "none";
+    el.style.border = "none";
+    el.style.color = "#00eaff";
+    el.style.fontWeight = "bold";
+    el.style.fontFamily = "'Roboto Mono', 'Orbitron', 'Segoe UI', Arial, sans-serif";
+    el.style.fontSize = "1.25rem";
+    el.style.textShadow = "0 0 8px #ff3ec9, 0 0 16px #00eaff";
+    el.style.cursor = "pointer";
+    el.style.boxShadow = "none";
+    el.style.padding = "0";
+    el.style.margin = "0.5em 0";
+    el.style.borderRadius = "0";
+    el.style.transition = "color 0.2s, text-shadow 0.2s";
+  });
+
+  // Hover efekti: renk değişimi ve ekstra neon
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      el.style.color = "#ff3ec9";
+      el.style.textShadow = "0 0 16px #39ff14, 0 0 24px #00eaff";
+    });
+    el.addEventListener("mouseleave", () => {
+      el.style.color = "#00eaff";
+      el.style.textShadow = "0 0 8px #ff3ec9, 0 0 16px #00eaff";
+    });
+  });
+});
+
 animate();
