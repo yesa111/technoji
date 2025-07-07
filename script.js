@@ -592,7 +592,7 @@ function playDisc(currDisc){
                     yPercent:0, xPercent:0, duration:1.1, stagger:2.5, delay: 0.2
                 })
                 let animation2 = gsap.to(chars,{
-                    xPercent:-60, duration:1.1, stagger:2.5
+                    xPercent:-70, duration:1.1, stagger:2.5
                 })
                 ScrollTrigger.create({
                     scroller: ".dContain",
