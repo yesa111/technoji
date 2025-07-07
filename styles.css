@@ -80,6 +80,14 @@ p, li, label, span {
   -webkit-backdrop-filter: none !important;
 }
 
+/* --- Disc tablosunun arka plan resmi kaldırıldı --- */
+#discs {
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
 /* Özel butonlar sadeleştirildi */
 .playButton,
 .playButton2,
