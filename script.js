@@ -205,8 +205,8 @@ let windowHalfY = window.innerHeight / 2.5;
 
 // Function to handle mouse movement
 function onMouseMove(event) {
-    mouseX = (event.clientX - windowHalfX) / 200;
-    mouseY = (event.clientY - windowHalfY) / 50;
+    mouseX = (event.clientX - windowHalfX) / 300;
+    mouseY = (event.clientY - windowHalfY) / 70;
 
 
 }
@@ -558,7 +558,7 @@ function playDisc(currDisc){
                     onRepeat: function () {
                         gsap.to(".cPhotos", {
                             duration: 0.4,
-                            backgroundColor: "rgb(0, 151, 151)"
+                            backgroundColor: "rgb(0, 8, 8, 0)"
                         });
                         gsap.to(".cPhotos", {
                             delay: 0.4,
