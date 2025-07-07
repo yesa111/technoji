@@ -1,149 +1,604 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 :root {
-    --backGroundColor: #120606; /* Daha koyu ve mat kırmızımsı arka plan */
-    --white: #e0d6d6; /* Daha mat beyaz */
-    --accentRed: #7a1818; /* Daha mat koyu kırmızı */
+    --backGroundColor: #1a0a0a; /* Daha koyu kırmızımsı arka plan */
+    --white: #f3eaea; /* Kirli beyaz */
+    --accentRed: #b71c1c; /* Koyu kırmızı accent */
 }
 
-/* Temel font ve renkler sadeleştirildi */
 * {
     font-family: 'Roboto Mono', monospace;
-    color: var(--white);
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-    letter-spacing: 0.5px;
+    touch-action: auto;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain !important;
 }
 
-/* Arka plan ve ana layout */
 body, html {
-    background: var(--backGroundColor);
-    color: var(--white);
+    position: fixed;
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    height: 100svh;
+    background: var(--backGroundColor);
+    color: var(--white);
     overflow: hidden;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: contain;
+    touch-action: auto;
 }
 
-/* Header ve ana başlık */
-h1 {
-    font-size: 2.2rem;
-    color: var(--accentRed);
-    text-align: left;
-    letter-spacing: 2px;
-    text-shadow: 0 0 8px #2a0a0a;
-    margin: 2vw 0 1vw 2vw;
-    background: none;
-    border: none;
+#container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    outline: none;
 }
 
-/* Sadeleştirilmiş çizgi */
+.content {
+    display: flex;
+    gap: min(6vw, 5em);
+    width: 100vw;
+    color: var(--white);
+    padding-top: 3em;
+    position: relative;
+}
+
+.mainPage {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    pointer-events: none;
+    touch-action: none;
+}
+
 .content:before {
-    border-bottom: 1px dashed var(--accentRed);
-    opacity: 0.4;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--accentRed); /* Kırmızı çizgi */
+    transform: scaleX(1);
 }
 
-/* Paragraflar daha küçük ve soluk */
+h1 {
+    font-size: min(6vw,2rem);
+    width: 50vw;
+    line-height: 97%;
+    text-align: right;
+    color: var(--accentRed); /* Başlık kırmızı */
+}
+
+.mainPage :where(h1,p) {
+    flex-basis: 0;
+    flex-grow: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
 p {
-    font-size: 1.1rem;
-    color: #b97e7e;
-    width: 60vw;
-    margin-left: 2vw;
-    margin-bottom: 1.5vw;
-    background: none;
+    font-size: min(4.5vw, 1.3rem);
+    width: 40vw;
 }
 
-/* Panel ve kutular sadeleştirildi */
-.aboutPanel, .discMenu, .charPanel, .myTracks, .photos, .photo, .embedTrack {
-    background: none !important;
-    box-shadow: none !important;
-    border: 1px solid #2a0a0a !important;
-    color: var(--white) !important;
-    border-radius: 0 !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+svg {
+    position: absolute;
+    z-index: -10;
 }
 
-/* Panel başlıkları */
-.aboutPanel h2, .aboutPanel h3, .charPanel h2 {
-    color: var(--accentRed);
-    background: none;
-    text-shadow: 0 0 4px #2a0a0a;
-    margin-bottom: 0.5rem;
+.dContents h3 {
+    font-size: 2rem;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    margin-top: 0;
 }
 
-/* Butonlar sade ve köşeli */
 .playButton, .playButton2, .exitMenu, .nextDisc, .prevDisc, .startDisc, .rDisc {
-    background: none !important;
-    border: 1px solid var(--accentRed) !important;
-    color: var(--accentRed) !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    font-size: 1.1rem;
-    transition: background 0.2s, color 0.2s;
-}
-.playButton:hover, .playButton2:hover, .exitMenu:hover, .nextDisc:hover, .prevDisc:hover, .startDisc:hover, .rDisc:hover {
-    background: var(--accentRed) !important;
-    color: var(--white) !important;
+    font-family: 'Roboto Mono', monospace;
 }
 
-/* Scrollbar daha ince ve koyu */
+.playButton {
+    pointer-events: auto;
+    position: absolute;
+    height: min(25vw,10rem);
+    bottom: 2%;
+    right: 2%;
+    width: min(25vw,10rem);
+    border-radius: 50%;
+    border: 2px solid var(--accentRed);
+    background: #2a0a0a;
+    color: var(--white);
+    font-size: 2.5vw;
+}
+.playButton:hover {
+    background-color: var(--accentRed);
+    color: #fff;
+}
+.playButton:active {
+    background-color: #600;
+    box-shadow: 0 0 8px #b71c1c;
+}
+
+.playButton2 {
+    pointer-events: auto;
+    position: absolute;
+    height: min(25vw,10rem);
+    bottom: -40%;
+    right: 2%;
+    width: min(25vw,10rem);
+    border-radius: 50%;
+    border: 1px solid #20b2aa;
+    font-size: 2.5vw;
+}
+.playButton2:hover {
+    background-color: #0083ca;
+}
+.playButton2:active {
+    background-color: #00766c;
+    box-shadow: -1px -1px #484848;
+    transform: translateY(4px);
+}
+
+.discMenu:not(.exitMenu) {
+    position: absolute;
+    height: 100%;
+    background-color: var(--backGroundColor);
+    opacity: 0.95;
+    width: 50vw;
+    left: 350%;
+    display: grid;
+    place-content: center;
+    border: 1px solid #140038;
+    text-align: center;
+    justify-items: center;
+    color: var(--white);
+    background-image: radial-gradient(#454b91 0.6px, rgba(0,0,0,0.308) 0.6px);
+    background-size: 12px 12px;
+    z-index: -10;
+}
+
+.exitMenu {
+    pointer-events: auto;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    border-radius: 50%;
+    height: 8vw;
+    width: 8vw;
+    max-height: 50px;
+    max-width: 50px;
+    font-size: 1.5rem;
+    background-color: #b2ebf2;
+}
+.exitMenu:hover {
+    background-color: #0083ca;
+}
+.exitMenu:active {
+    background-color: #00766c;
+    box-shadow: -1px -1px #484848;
+    transform: translateY(4px);
+}
+
+.nextDisc, .prevDisc {
+    pointer-events: auto;
+    position: absolute;
+    bottom: 2%;
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+    max-height: 100px;
+    max-width: 100px;
+    font-size: 5vw;
+    background-color: #b2ebf2;
+}
+.nextDisc { right: 10%; }
+.prevDisc { left: 10%; }
+
+.startDisc {
+    pointer-events: auto;
+    position: absolute;
+    bottom: 2%;
+    place-content: center;
+    border: 4px solid #000;
+    border-radius: 10%;
+    height: 10vw;
+    width: 20vw;
+    max-height: 100px;
+    max-width: 250px;
+    font-size: 3vw;
+    background-color: #b2ebf2;
+}
+
+.rDisc {
+    transition: opacity 0.5s ease-out;
+    pointer-events: auto;
+    touch-action: auto;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    place-content: center;
+    border: 4px solid #000;
+    border-radius: 50%;
+    height: max(10vw,3rem);
+    width: max(10vw,3rem);
+    max-height: 100px;
+    max-width: 100px;
+    font-size: 3vw;
+    background-color: rgba(255, 0, 0, 0.541);
+    opacity: 0.3;
+    z-index: 1000;
+}
+.rDisc:hover {
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+}
+
+#video-iframe {
+    pointer-events: none;
+    touch-action: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+}
+
+canvas { display: block; }
+
+.myTracks {
+    width: 100%;
+    height: 80vh;
+    min-height: 80vh;
+    max-height: 100vh;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    border: 3px solid #19191ba7;
+    border-radius: 1%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    pointer-events: auto;
+    touch-action: auto !important;
+    background-color: #1d1d1daf;
+    grid-column: 1/-1;
+    grid-template-rows: 10vh;
+    grid-auto-rows: 40vh;
+}
+
+.embedTrack {
+    pointer-events: auto;
+    justify-self: center;
+    align-self: center;
+    margin-top: 20px;
+    width: 100vw;
+    max-width: 100%;
+    height: 90vh;
+    max-height: 120vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    touch-action: auto;
+}
+.embedTrack:hover {
+    background-color: #a8bbbf;
+    border: 0px solid #2f21ada7;
+}
+
+/* custom scrollbar */
 ::-webkit-scrollbar {
-    width: 4px;
-    background: #1a0a0a;
+    scrollbar-gutter: stable;
+    width: 2px;
+    opacity: 1;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background: #7a1818;
-    border-radius: 0;
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
 }
 
-/* Panel arka planları ve efektler kaldırıldı */
-.aboutPanel, .discMenu, .charPanel, .myTracks, .photos, .photo, .embedTrack {
-    background: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
+.photos {
+    width: 100%;
+    height: 40vw;
+    border-radius: 20px;
+    position: relative;
+    max-width: 100%;
+    max-height: 50vh;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    place-self: start auto;
+    overflow: hidden;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+    transform: translateZ(0);
+    will-change: transform, top;
 }
 
-/* Simgeler ve renkli kutular daha mat ve sade */
-.red { background: #7a1818 !important; }
-.green { background: #3a3a2a !important; }
-.blue { background: #2a2a3a !important; }
-.pink { background: #7a1840 !important; }
+.photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.photo img {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    display: flex;
+    overflow: hidden;
+    place-content: center;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
 
-/* canScroll ve diğer overlay'ler daha sade */
+.dContents {
+    pointer-events: none;
+    position: relative;
+    width: auto;
+    height: auto;
+    scroll-behavior: smooth;
+    z-index: 100;
+    background-color: #0b0c10ac;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    grid-template-columns: 45% 45%;
+    column-gap: 1.25rem;
+    row-gap: 25vh;
+    top: 100%;
+    flex-direction: column;
+    place-content: start center;
+    padding-top: 2rem;
+    overscroll-behavior: contain;
+    touch-action: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .dContents {
+        pointer-events: none;
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        scroll-behavior: smooth;
+        z-index: 100;
+        background-color: #0b0c10ac;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        row-gap: 12vh;
+        top: 100%;
+        flex-direction: column;
+        place-content: top;
+        padding-top: 2rem;
+        overscroll-behavior: contain;
+        touch-action: auto;
+    }
+    .photos {
+        width: 100%;
+        height: 80vw;
+        border-radius: 20px;
+        position: relative;
+        max-width: 100%;
+        max-height: 60vh;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        overflow: hidden;
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+    }
+}
+
+.dContain {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    scroll-behavior: none;
+    pointer-events: none;
+    background-color: #48484800;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    place-content: top;
+    z-index: 10;
+    margin: auto;
+    overscroll-behavior: contain;
+    touch-action: auto;
+}
+
 .canScroll {
-    background: none !important;
-    color: #a55;
-    border-top: 1px dashed #7a1818;
-    opacity: 0.7;
+    width: 100%;
+    max-height: 20%;
+    overflow: hidden;
+    pointer-events: none;
+    touch-action: none;
+    z-index: 10;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: #ffb3b3;
+    background: linear-gradient(rgba(183,28,28,0.1), #1a0a0a 90%);
+}
+.canScroll h3 {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 240%;
 }
 
-/* Responsive ve grid sadeleştirildi */
-.dContents, .mainPage, .content, .myTracks {
-    background: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
+.red { background: crimson; }
+.green { background: MediumSeaGreen; }
+.blue { background: dodgerblue; }
+.pink { background: deepPink; }
+
+.discAbout {
+    width: 100%;
+    padding-right: 0rem;
 }
 
-/* Panel kenarlıkları ve gridler */
+.aboutPanel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0px 0px 1px 3px rgba(255,255,255,0.4);
+    background: rgba(60, 0, 0, 0.7); /* Koyu kırmızımsı panel */
+    color: #ffb3b3; /* Açık kırmızımsı yazı */
+    font-family: 'Roboto Mono', monospace;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    text-align: start;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: min(3vw,2rem);
+    line-height: max(3vw,3rem);
+    backdrop-filter: blur(8.1px);
+    -webkit-backdrop-filter: blur(8.1px);
+    margin-bottom: min(10%,2rem);
+    touch-action: auto;
+    pointer-events: auto;
+}
+.aboutPanel h3 {
+    text-align: start;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: min(3vw,1.2rem);
+    margin: auto;
+}
+.aboutPanel h2 {
+    color: linear-gradient(90deg,rgb(0,0,0)0,rgba(255,255,255,0)100%);
+    background-image: linear-gradient(90deg,rgb(153,36,36)0,rgba(255,255,255,0)100%);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 100% 10%;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 .panels3d {
-    border: 1px dashed #7a1818;
-    background: none !important;
-    box-shadow: none !important;
+    padding-bottom: 10%;
+    border: 3px solid #2f21ada7;
+    justify-content: center;
+    display: flex;
+}
+.aboutPanel b {
+    font-size: min(4vw,2rem);
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 
-/* Progress bar sade */
+.charPanel {
+    color: #000;
+    position: relative;
+    grid-column: 1/-1;
+    grid-template-rows: auto;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    background-color: #2a0a0a99; /* Daha koyu panel */
+    border: 3px solid var(--accentRed);
+    scroll-behavior: auto;
+    pointer-events: none;
+    touch-action: none;
+    backdrop-filter: blur(8.1px);
+    -webkit-backdrop-filter: blur(8.1px);
+}
+.charPanel h2 {
+    z-index: 101;
+    position: absolute;
+    top: 50%;
+    left: min(20%,5vw);
+    transform: translate(-0%, -50%);
+    color: var(--accentRed);
+    background-image: linear-gradient(90deg, #b71c1c 0, rgba(255,255,255,0) 100%);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 100% 10%;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 progress {
-    background: #1a0a0a;
-    height: 8px;
+    position: absolute;
+    top: 95vh;
+    left: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
     border: none;
+    background: #2a0a0a;
 }
 
-/* SVG ve img'ler için filtre */
-svg, img {
-    filter: grayscale(0.7) contrast(1.1) brightness(0.7);
+.cPhotos {
+    width: 100%;
+    height: 100vh;
+    left: 0%;
+    top: 0vh;
+    overflow: hidden;
+    border: 0px solid #2f21ada7;
+    position: absolute;
+    background-color: rgba(0,255,221,0.178);
+    clip-path: circle(40vw at 100% 50%);
+    background-size: cover;
 }
 
-/* ...diğer kodlar aynı kalabilir... */
+.myChar {
+    position: absolute;
+    max-width: 100%;
+    height: 100vh;
+    top: 50%;
+    left: 85%;
+    clip-path: circle(20vw at 50% 50%);
+    background-color: #3f3f3f;
+    background-size: cover;
+    padding: 100vh;
+}
+
+.charPanel svg {
+    bottom: 0;
+    transform: scaleX(-1);
+    min-height: 40vh;
+}
+
+/* .gsap-marker-scroller-start, .gsap-marker-scroller-end, .pin-spacer, .scrollThis: unchanged or commented out as in original */
+.pin-spacer {
+    pointer-events: none;
+    touch-action: auto;
+    place-self: start auto;
+}
+.scrollThis {
+    height: 100vh;
+    position: fixed;
+    opacity: 1 !important;
+}
