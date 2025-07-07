@@ -265,13 +265,13 @@ function animate() {
 
         // Bobble hareketi biraz yavaşlatıldı
         if (bobble) {
-            discCamera.position.y += 0.0025;
-            if (discCamera.position.y >= 0.12) { // 0.1 -> 0.12
+            discCamera.position.y += 0.025;
+            if (discCamera.position.y >= 1.12) { // 0.1 -> 0.12
                 bobble = false;
             }
         } else {
             discCamera.position.y -= 0.0025;
-            if (discCamera.position.y <= -0.12) { // -0.1 -> -0.12
+            if (discCamera.position.y <= -0.15) { // -0.1 -> -0.12
                 bobble = true;
             }
         }
@@ -526,55 +526,61 @@ function playDisc(currDisc){
 
             console.log(photos);
             const aPhotos = photos.slice(1);
-            gsap.set(aPhotos, {yPercent:0, xPercent:-105})
-            gsap.set(chars, {yPercent: -50, xPercent:0})
+            gsap.set(aPhotos, { yPercent: 0, xPercent: -110 }); // xPercent biraz daha fazla
+            gsap.set(chars, { yPercent: -60, xPercent: 0 }); // yPercent değişti
             let charKeys = Object.keys(jsonData['discs'][currDisc]['characters']);
             let currProg = -1;
             let mobileProg = -1;
 
-            mm.add("(max-width: 768px)",() => {
-                let animation = gsap.to(aPhotos,{
-                    yPercent:0, xPercent:0, duration:1, stagger:3, delay: 1, yoyo: true, repeatDelay: 2, repeat: -1
+            mm.add("(max-width: 768px)", () => {
+                let animation = gsap.to(aPhotos, {
+                    yPercent: 0,
+                    xPercent: 0,
+                    duration: 1.2, // biraz daha uzun
+                    stagger: 2.5, // daha kısa aralık
+                    delay: 0.8,
+                    yoyo: true,
+                    repeatDelay: 1.5,
+                    repeat: -1
                 });
                 
                 
-                let animation2 = gsap.to(chars,{
-                    xPercent:-50, 
-                    duration:1, 
-                    scrollTrigger:{
+                let animation2 = gsap.to(chars, {
+                    xPercent: -60, // -50 yerine -60
+                    duration: 1.1,
+                    scrollTrigger: {
                         scroller: ".dContain",
-                        trigger:".cPhotos",
-                        start: "top 50%",
-                        end: "90% 50%",
-                        toggleActions: "play pause play pause",
-                        markers: true
+                        trigger: ".cPhotos",
+                        start: "top 55%",
+                        end: "85% 55%",
+                        toggleActions: "play reverse play reverse",
+                        markers: false
                     },
-                    onRepeat:function(){
+                    onRepeat: function () {
                         gsap.to(".cPhotos", {
-                            duration: 0.5,
-                            backgroundColor: "rgb(151, 0, 0)"
+                            duration: 0.4,
+                            backgroundColor: "rgb(0, 151, 151)"
                         });
                         gsap.to(".cPhotos", {
-                            delay:0.5,
+                            delay: 0.4,
                             duration: 1,
                             backgroundColor: "rgba(0, 255, 221, 0.178)"
                         });
-                        
                     },
-                    stagger:{
-                        each: 5,
-                        onComplete: function(i,target,targets){
+                    stagger: {
+                        each: 4,
+                        onComplete: function (i, target, targets) {
                             let currentElement = this.targets()[0];
-
-                            // Find the index of this element in the targets array
                             let index = chars.indexOf(currentElement);
-                            gsap.to(document.getElementById("characterTag"),{
-                                duration: 0.5,
-                                text: charKeys[index],
-                                ease: "none",
+                            gsap.to(document.getElementById("characterTag"), {
+                                duration: 0.4,
+                                text: charKeys[index] ? charKeys[index].toUpperCase() : "",
+                                ease: "power1.inOut",
                             });
                         }
-                    }, delay: 1, repeat: -1
+                    },
+                    delay: 0.8,
+                    repeat: -1
                 });
                 ScrollTrigger.refresh();
             });
@@ -583,73 +589,59 @@ function playDisc(currDisc){
 
             mm.add("(min-width: 769px)", () =>{
                 let animation = gsap.to(aPhotos,{
-                    yPercent:0, xPercent:0, duration:1, stagger:3, delay: 0
+                    yPercent:0, xPercent:0, duration:1.1, stagger:2.5, delay: 0.2
                 })
                 let animation2 = gsap.to(chars,{
-                    xPercent:-50, duration:1, stagger:3
+                    xPercent:-60, duration:1.1, stagger:2.5
                 })
                 ScrollTrigger.create({
                     scroller: ".dContain",
-                    trigger:".discAbout",
-                    start: "top 20%",
-                    //end:()=> "+=" + document.getElementById('container-disc').offsetHeight,
-                    end: "75% 20%", 
+                    trigger: ".discAbout",
+                    start: "top 25%",
+                    end: "70% 25%",
                     pin: ".photos",
                     animation:animation,
-                    scrub:true,
-                    //markers: true,
-                    anticipatePin: 5,
+                    scrub: 0.8,
+                    anticipatePin: 3,
                     pinSpacing: true,
                     pinType: "transform",
-                    fastScrollEnd: true, // This improves scroll end detection speed on touch devices
+                    fastScrollEnd: true,
                     ignoreMobileResize: false,
                     invalidateOnRefresh: true
-
-                    
-
                 });
 
                 //scrollTrigger for character info
                 ScrollTrigger.create({
                     scroller: ".dContain",
-                    trigger:".cPhotos",
+                    trigger: ".cPhotos",
                     toggleActions: "play none reverse none",
-                    //onEnter:()=> gsap.to(".charPanel", {duration: 1, top:"0%"}),
-                    //onLeave:()=> gsap.to(".charPanel", {duration: 1, top: "-0%"}),
-                    //onEnterBack:()=> gsap.to(".charPanel", {duration: 1, top:"0%"}),
-                    //onLeaveBack:()=> gsap.to(".charPanel", {duration: 1, top: "0%"}),
-                    //end:()=> "+=" + document.getElementById('container-disc').offsetHeight,
-                    end: "bottom+=5000px 0%", 
-                    //onEnter:()=> console.log("enter"),
-                    //onLeave:()=> console.log("leave"),
+                    end: "bottom+=4000px 0%",
                     onUpdate: (self) => {
-                        //console.log(self.progress);
-                        gsap.to("progress",{
-                        duration: 0.1, 
+                        gsap.to("progress", {
+                        duration: 0.12, 
                         value: self.progress*100
                         });
                         //modulo of self.progress by 25% to get a animation
                         //trigger for each image with a text change
-                        let charProg = Math.max(0,Math.floor((self.progress*100-10) / 30));
-                        if(charProg != currProg && charProg < 4){
+                        let charProg = Math.max(0,Math.floor((self.progress*100-5) / 28));
+                        if(charProg != currProg && charProg < charKeys.length){
                             gsap.to(document.getElementById("characterTag"),{
-                                duration: 0.5,
-                                text: charKeys[charProg],
-                                ease: "none",
+                                duration: 0.4,
+                                text: charKeys[charProg] ? charKeys[charProg].toUpperCase() : "",
+                                ease: "power1.inOut",
                             });
                             currProg = charProg;
                         }
 
 
                     },
-                    //markers: true,
                     pin: ".charPanel",
                     animation: animation2,
-                    scrub: 1,
+                    scrub: 0.8,
                     invalidateOnRefresh: true,
                     immediateRender:false,
                     ignoreMobileResize: false,
-                    anticipatePin: 5,
+                    anticipatePin: 3,
                     fastScrollEnd: true, // This improves scroll end detection speed on touch devices
                     pinSpacing: true,
                     pinType: "transform"
