@@ -11,7 +11,7 @@
 body {
   background: linear-gradient(135deg, var(--bg) 70%, #232946 100%);
   color: var(--text);
-  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Roboto Mono', 'Orbitron', 'Segoe UI', Arial, sans-serif;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -19,13 +19,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 1.25rem; /* Yazılar bir tık daha büyük */
 }
 
 h1, h2, h3 {
-  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Roboto Mono', 'Orbitron', 'Segoe UI', Arial, sans-serif;
   text-shadow: 0 0 8px var(--neon-green), 0 0 16px var(--neon-pink);
   color: var(--neon-green);
   margin-bottom: 1rem;
+  font-size: 2.5rem; /* Başlıklar daha büyük */
 }
 
 a, button {
