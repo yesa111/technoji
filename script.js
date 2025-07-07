@@ -271,9 +271,8 @@ function animate() {
             }
         } else {
             discCamera.position.y -= 0.0025;
-            if (discCamera.position.y <= -0.15) { // -0.1 -> -0.12
+            if (discCamera.position.y <= -0.15) // -0.1 -> -0.12
                 bobble = true;
-            }
         }
 
         renderer.render(scene, camera);
@@ -771,44 +770,58 @@ function changeVideoSource(newVideoId) {
 
 // --- TASARIM İYİLEŞTİRMELERİ ---
 
-// Neon efektli başlıklar ve yazılar için class ekleme
 document.addEventListener("DOMContentLoaded", () => {
-  // Tüm başlıkları neon efektiyle güncelle
+  // Başlıklar: Büyük, sade, neon efektli
   document.querySelectorAll("h1, h2, h3").forEach(el => {
-    el.style.textShadow = "0 0 8px #39ff14, 0 0 16px #ff3ec9";
+    el.style.textShadow = "0 0 6px #39ff14";
     el.style.color = "#39ff14";
     el.style.fontFamily = "'Roboto Mono', 'Orbitron', 'Segoe UI', Arial, sans-serif";
     el.style.fontWeight = "bold";
+    el.style.fontSize = "clamp(2.5rem, 6vw, 4rem)";
+    el.style.margin = "1.5rem 0 1rem 0";
+    el.style.letterSpacing = "0.03em";
   });
 
-  // Tüm linkleri ve butonları sadeleştir, kutu ve arka planı kaldır
+  // Link ve butonlar: Sadece büyük, kalın, neon yazı (kutu yok)
   document.querySelectorAll("a, button").forEach(el => {
     el.style.background = "none";
     el.style.border = "none";
     el.style.color = "#00eaff";
     el.style.fontWeight = "bold";
     el.style.fontFamily = "'Roboto Mono', 'Orbitron', 'Segoe UI', Arial, sans-serif";
-    el.style.fontSize = "1.25rem";
-    el.style.textShadow = "0 0 8px #ff3ec9, 0 0 16px #00eaff";
+    el.style.fontSize = "2rem";
+    el.style.textShadow = "0 0 6px #ff3ec9";
     el.style.cursor = "pointer";
     el.style.boxShadow = "none";
     el.style.padding = "0";
-    el.style.margin = "0.5em 0";
+    el.style.margin = "1.2em 0";
     el.style.borderRadius = "0";
-    el.style.transition = "color 0.2s, text-shadow 0.2s";
+    el.style.transition = "color 0.5s, text-shadow 0.5s";
+    el.style.display = "inline";
   });
 
-  // Hover efekti: renk değişimi ve ekstra neon
+  // Hover efekti: Sadece hafif renk değişimi, animasyon donuk
   document.querySelectorAll("a, button").forEach(el => {
     el.addEventListener("mouseenter", () => {
       el.style.color = "#ff3ec9";
-      el.style.textShadow = "0 0 16px #39ff14, 0 0 24px #00eaff";
+      el.style.textShadow = "0 0 10px #39ff14";
     });
     el.addEventListener("mouseleave", () => {
       el.style.color = "#00eaff";
-      el.style.textShadow = "0 0 8px #ff3ec9, 0 0 16px #00eaff";
+      el.style.textShadow = "0 0 6px #ff3ec9";
     });
   });
+
+  // Paragraflar ve diğer yazılar da büyük ve sade olsun
+  document.querySelectorAll("p, li, label, span").forEach(el => {
+    el.style.fontFamily = "'Roboto Mono', 'Orbitron', 'Segoe UI', Arial, sans-serif";
+    el.style.fontSize = "1.5rem";
+    el.style.color = "#fff";
+    el.style.letterSpacing = "0.01em";
+  });
 });
+
+// GSAP animasyonlarını daha donuk (yavaş ve az hareketli) yap
+gsap.defaults({ease: "power1.out", duration: 2.5});
 
 animate();
