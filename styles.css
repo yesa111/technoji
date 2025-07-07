@@ -1,248 +1,149 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 :root {
-    --backGroundColor: #1a0a0a; /* Daha koyu kırmızımsı arka plan */
-    --white: #f3eaea; /* Kirli beyaz */
-    --accentRed: #b71c1c; /* Koyu kırmızı accent */
+    --backGroundColor: #120606; /* Daha koyu ve mat kırmızımsı arka plan */
+    --white: #e0d6d6; /* Daha mat beyaz */
+    --accentRed: #7a1818; /* Daha mat koyu kırmızı */
 }
 
+/* Temel font ve renkler sadeleştirildi */
 * {
     font-family: 'Roboto Mono', monospace;
-    touch-action: auto;
-    scroll-behavior: smooth;
-    overscroll-behavior: contain !important;
+    color: var(--white);
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    letter-spacing: 0.5px;
 }
 
+/* Arka plan ve ana layout */
 body, html {
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    height: 100svh;
     background: var(--backGroundColor);
     color: var(--white);
-    overflow: hidden;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: contain;
-    touch-action: auto;
-}
-
-#container {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    outline: none;
-}
-
-.content {
-    display: flex;
-    gap: min(6vw, 5em);
+    margin: 0;
+    padding: 0;
     width: 100vw;
-    color: var(--white);
-    padding-top: 3em;
-    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.mainPage {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-content: center;
-    pointer-events: none;
-    touch-action: none;
-}
-
-.content:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid var(--accentRed); /* Kırmızı çizgi */
-    transform: scaleX(1);
-}
-
+/* Header ve ana başlık */
 h1 {
-    font-size: min(6vw,2rem);
-    width: 50vw;
-    line-height: 97%;
-    text-align: right;
-    color: var(--accentRed); /* Başlık kırmızı */
+    font-size: 2.2rem;
+    color: var(--accentRed);
+    text-align: left;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #2a0a0a;
+    margin: 2vw 0 1vw 2vw;
+    background: none;
+    border: none;
 }
 
-.mainPage :where(h1,p) {
-    flex-basis: 0;
-    flex-grow: 1;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+/* Sadeleştirilmiş çizgi */
+.content:before {
+    border-bottom: 1px dashed var(--accentRed);
+    opacity: 0.4;
 }
 
+/* Paragraflar daha küçük ve soluk */
 p {
-    font-size: min(4.5vw, 1.3rem);
-    width: 40vw;
+    font-size: 1.1rem;
+    color: #b97e7e;
+    width: 60vw;
+    margin-left: 2vw;
+    margin-bottom: 1.5vw;
+    background: none;
 }
 
-svg {
-    position: absolute;
-    z-index: -10;
+/* Panel ve kutular sadeleştirildi */
+.aboutPanel, .discMenu, .charPanel, .myTracks, .photos, .photo, .embedTrack {
+    background: none !important;
+    box-shadow: none !important;
+    border: 1px solid #2a0a0a !important;
+    color: var(--white) !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 }
 
-.dContents h3 {
-    font-size: 2rem;
-    font-family: 'Roboto Mono', monospace;
-    text-align: center;
-    margin-top: 0;
+/* Panel başlıkları */
+.aboutPanel h2, .aboutPanel h3, .charPanel h2 {
+    color: var(--accentRed);
+    background: none;
+    text-shadow: 0 0 4px #2a0a0a;
+    margin-bottom: 0.5rem;
 }
 
+/* Butonlar sade ve köşeli */
 .playButton, .playButton2, .exitMenu, .nextDisc, .prevDisc, .startDisc, .rDisc {
-    font-family: 'Roboto Mono', monospace;
+    background: none !important;
+    border: 1px solid var(--accentRed) !important;
+    color: var(--accentRed) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+}
+.playButton:hover, .playButton2:hover, .exitMenu:hover, .nextDisc:hover, .prevDisc:hover, .startDisc:hover, .rDisc:hover {
+    background: var(--accentRed) !important;
+    color: var(--white) !important;
 }
 
-.playButton {
-    pointer-events: auto;
-    position: absolute;
-    height: min(25vw,10rem);
-    bottom: 2%;
-    right: 2%;
-    width: min(25vw,10rem);
-    border-radius: 50%;
-    border: 2px solid var(--accentRed);
-    background: #2a0a0a;
-    color: var(--white);
-    font-size: 2.5vw;
+/* Scrollbar daha ince ve koyu */
+::-webkit-scrollbar {
+    width: 4px;
+    background: #1a0a0a;
 }
-.playButton:hover {
-    background-color: var(--accentRed);
-    color: #fff;
-}
-.playButton:active {
-    background-color: #600;
-    box-shadow: 0 0 8px #b71c1c;
+::-webkit-scrollbar-thumb {
+    background: #7a1818;
+    border-radius: 0;
 }
 
-.playButton2 {
-    pointer-events: auto;
-    position: absolute;
-    height: min(25vw,10rem);
-    bottom: -40%;
-    right: 2%;
-    width: min(25vw,10rem);
-    border-radius: 50%;
-    border: 1px solid #20b2aa;
-    font-size: 2.5vw;
-}
-.playButton2:hover {
-    background-color: #0083ca;
-}
-.playButton2:active {
-    background-color: #00766c;
-    box-shadow: -1px -1px #484848;
-    transform: translateY(4px);
+/* Panel arka planları ve efektler kaldırıldı */
+.aboutPanel, .discMenu, .charPanel, .myTracks, .photos, .photo, .embedTrack {
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }
 
-.discMenu:not(.exitMenu) {
-    position: absolute;
-    height: 100%;
-    background-color: var(--backGroundColor);
-    opacity: 0.95;
-    width: 50vw;
-    left: 350%;
-    display: grid;
-    place-content: center;
-    border: 1px solid #140038;
-    text-align: center;
-    justify-items: center;
-    color: var(--white);
-    background-image: radial-gradient(#454b91 0.6px, rgba(0,0,0,0.308) 0.6px);
-    background-size: 12px 12px;
-    z-index: -10;
+/* Simgeler ve renkli kutular daha mat ve sade */
+.red { background: #7a1818 !important; }
+.green { background: #3a3a2a !important; }
+.blue { background: #2a2a3a !important; }
+.pink { background: #7a1840 !important; }
+
+/* canScroll ve diğer overlay'ler daha sade */
+.canScroll {
+    background: none !important;
+    color: #a55;
+    border-top: 1px dashed #7a1818;
+    opacity: 0.7;
 }
 
-.exitMenu {
-    pointer-events: auto;
-    position: absolute;
-    top: 1%;
-    right: 2%;
-    border-radius: 50%;
-    height: 8vw;
-    width: 8vw;
-    max-height: 50px;
-    max-width: 50px;
-    font-size: 1.5rem;
-    background-color: #b2ebf2;
-}
-.exitMenu:hover {
-    background-color: #0083ca;
-}
-.exitMenu:active {
-    background-color: #00766c;
-    box-shadow: -1px -1px #484848;
-    transform: translateY(4px);
+/* Responsive ve grid sadeleştirildi */
+.dContents, .mainPage, .content, .myTracks {
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }
 
-.nextDisc, .prevDisc {
-    pointer-events: auto;
-    position: absolute;
-    bottom: 2%;
-    border-radius: 50%;
-    height: 10vw;
-    width: 10vw;
-    max-height: 100px;
-    max-width: 100px;
-    font-size: 5vw;
-    background-color: #b2ebf2;
-}
-.nextDisc { right: 10%; }
-.prevDisc { left: 10%; }
-
-.startDisc {
-    pointer-events: auto;
-    position: absolute;
-    bottom: 2%;
-    place-content: center;
-    border: 4px solid #000;
-    border-radius: 10%;
-    height: 10vw;
-    width: 20vw;
-    max-height: 100px;
-    max-width: 250px;
-    font-size: 3vw;
-    background-color: #b2ebf2;
+/* Panel kenarlıkları ve gridler */
+.panels3d {
+    border: 1px dashed #7a1818;
+    background: none !important;
+    box-shadow: none !important;
 }
 
-.rDisc {
-    transition: opacity 0.5s ease-out;
-    pointer-events: auto;
-    touch-action: auto;
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    place-content: center;
-    border: 4px solid #000;
-    border-radius: 50%;
-    height: max(10vw,3rem);
-    width: max(10vw,3rem);
-    max-height: 100px;
-    max-width: 100px;
-    font-size: 3vw;
-    background-color: rgba(255, 0, 0, 0.541);
-    opacity: 0.3;
-    z-index: 1000;
-}
-.rDisc:hover {
-    transition: opacity 0.2s ease-in;
-    opacity: 1;
+/* Progress bar sade */
+progress {
+    background: #1a0a0a;
+    height: 8px;
+    border: none;
 }
 
-#video-iframe {
-    pointer-events: none;
-    touch-action: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0%;
+/* SVG ve img'ler için filtre */
+svg, img {
+    filter: grayscale(0.7) contrast(1.1) brightness(0.7);
 }
 
 canvas { display: block; }
@@ -452,10 +353,10 @@ canvas { display: block; }
     font-size: 240%;
 }
 
-.red { background: crimson; }
-.green { background: MediumSeaGreen; }
-.blue { background: dodgerblue; }
-.pink { background: deepPink; }
+.red { background: #7a1818 !important; }
+.green { background: #3a3a2a !important; }
+.blue { background: #2a2a3a !important; }
+.pink { background: #7a1840 !important; }
 
 .discAbout {
     width: 100%;
