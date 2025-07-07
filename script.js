@@ -255,40 +255,33 @@ window.addEventListener('resize', () =>
 let bobble = true;
 // Add animation loop
 function animate() {
-    if(activeBackground){
-        controls.update()
+    if (activeBackground) {
+        controls.update();
         requestAnimationFrame(animate);
-        
-        // Update camera position based on mouse movement
-        camera.position.x += moveAble*(mouseX - camera.position.x) * 0.02;
-        camera.position.y += (-mouseY - camera.position.y) * 0.02;
 
+        // Kamera pozisyonunu mouse hareketine göre güncelle
+        camera.position.x += moveAble * (mouseX - camera.position.x) * 0.012; // 0.01 -> 0.012 (biraz hızlandı)
+        camera.position.y += (-mouseY - camera.position.y) * 0.012;
 
-        // Update camera position based on mouse movement
-        //textCamera.position.x += (mouseX - textCamera.position.x) * 1;
-        //textCamera.position.y += (-mouseY - textCamera.position.y) * 1;
-
-        if (bobble == true){
-            discCamera.position.y += 0.003;
-            if (discCamera.position.y >= 0.1){
+        // Bobble hareketi biraz yavaşlatıldı
+        if (bobble) {
+            discCamera.position.y += 0.0025;
+            if (discCamera.position.y >= 0.12) { // 0.1 -> 0.12
                 bobble = false;
             }
-        }
-        else{
-            discCamera.position.y -= 0.003;
-            if (discCamera.position.y <= -0.1){
+        } else {
+            discCamera.position.y -= 0.0025;
+            if (discCamera.position.y <= -0.12) { // -0.1 -> -0.12
                 bobble = true;
             }
         }
-
 
         renderer.render(scene, camera);
         renderer2.render(discScene, discCamera);
         //renderer3.render(textScene, textCamera);
     }
     // Capture the iframe content and update the texture
-    //videoContext.drawImage(videoIframe.contentWindow.document.body, 0, 0, videoCanvas.width, videoCanvas.height);
-    //videoTexture.needsUpdate = true;
+    //videoContext.drawImage(videoIframe.contentWindow.document.body, 0, 0, videoCanvas.width,
 }
 
 document.getElementById("playB1").onclick = function(){playTransition()};
